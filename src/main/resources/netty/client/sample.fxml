@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="450.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="netty.client.Controller">
+   <cursor>
+      <Cursor fx:constant="DEFAULT" />
+   </cursor>
+   <children>
+      <TextField fx:id="input" onAction="#send" layoutX="5.0" layoutY="414.0" prefHeight="30.0" prefWidth="226.0" />
+      <ListView fx:id="listView" layoutX="6.0" layoutY="6.0" prefHeight="399.0" prefWidth="287.0" />
+   </children>
+</AnchorPane>
