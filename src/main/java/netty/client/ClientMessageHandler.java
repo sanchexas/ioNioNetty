@@ -1,11 +1,11 @@
 package netty.client;
 
-import netty.Message;
+import netty.AbstractCommand;
 
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
 
-public class ClientMessageHandler extends SimpleChannelInboundHandler<Message> {
+public class ClientMessageHandler extends SimpleChannelInboundHandler<AbstractCommand> {
 
     private final Callback callback;
 
@@ -14,7 +14,7 @@ public class ClientMessageHandler extends SimpleChannelInboundHandler<Message> {
     }
 
     @Override
-    protected void channelRead0(ChannelHandlerContext ctx, Message message) throws Exception {
+    protected void channelRead0(ChannelHandlerContext ctx, AbstractCommand message) throws Exception {
         callback.call(message);
     }
 

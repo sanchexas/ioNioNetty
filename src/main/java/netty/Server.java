@@ -28,7 +28,7 @@ public class Server {
                         protected void initChannel(SocketChannel channel) throws Exception {
                             channel.pipeline().addLast(
                                     new ObjectEncoder(),
-                                    new ObjectDecoder(ClassResolvers.cacheDisabled(null)) ,
+                                    new ObjectDecoder(200 * 1024 * 1024,ClassResolvers.cacheDisabled(null)) ,
                                     new ObjectHandler()
                             );
                         }
